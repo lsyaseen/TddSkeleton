@@ -4,20 +4,19 @@ import java.util.*;
 
 public class Example {
 
-    String[] aList;
+    ArrayList<String> aList;
 
     public Example() {
-        aList = new String[10];
+        aList = new ArrayList<>();
     }
 
-    public void AddItem(String a) {
-    	aList[0] = a;
-	}
+    public void addItem(String a) {
+        aList.add(a);
+    }
 
     public boolean isEmpty() {
-        return true;
+        return aList.isEmpty();
     }
-
 
 
 }
