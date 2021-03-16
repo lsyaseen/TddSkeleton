@@ -31,4 +31,15 @@ public class ExampleTest {
         assertThat(myExample.aList.get(2), is("first"));
 
     }
+
+    @Test
+    public void avoidDupes(){
+        myExample.addItem("first");
+        myExample.addItem("first");
+
+        assertThat(myExample.aList.get(0), is("first"));
+        assertThat(myExample.aList.size(), is(1));
+
+
+    }
 }
