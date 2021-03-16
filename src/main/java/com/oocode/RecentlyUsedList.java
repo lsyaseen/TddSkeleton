@@ -2,11 +2,11 @@ package com.oocode;
 
 import java.util.*;
 
-public class Example {
+public class RecentlyUsedList {
 
     ArrayList<String> aList;
 
-    public Example() {
+    public RecentlyUsedList() {
         aList = new ArrayList<>();
     }
 
