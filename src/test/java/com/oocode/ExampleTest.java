@@ -58,4 +58,11 @@ public class ExampleTest {
         assertThat(myExample.aList.get(1), is("second"));
 
     }
+    @Test
+    public void checkIfRetrieved(){
+        myExample.addItem("first");
+        String result = myExample.getItem(0);
+
+        assertThat(result, is("first"));
+    }
 }
