@@ -4,6 +4,7 @@ import org.junit.*;
 
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.core.Is.*;
+import static org.hamcrest.Matchers.nullValue;
 
 public class ExampleTest {
 
@@ -58,11 +59,18 @@ public class ExampleTest {
         assertThat(myExample.aList.get(1), is("second"));
 
     }
+
     @Test
     public void checkIfRetrieved(){
         myExample.addItem("first");
         String result = myExample.getItem(0);
 
         assertThat(result, is("first"));
+    }
+
+    @Test
+    public void retrieveUnavailableIndex(){
+        myExample.addItem("first");
+        assertThat(myExample.getItem(8), is(nullValue()));
     }
 }
