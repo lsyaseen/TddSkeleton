@@ -1,13 +1,17 @@
 package com.oocode;
+
 import java.util.*;
 
 public class Example {
 
-	public static void main(String args[]){
+    String[] aList;
 
-		List<String> aList = new ArrayList<String>();
+    public Example() {
+        aList = new String[10];
+    }
 
-	}
-
+    public boolean isEmpty() {
+        return true;
+    }
 
 }
