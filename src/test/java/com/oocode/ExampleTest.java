@@ -40,6 +40,22 @@ public class ExampleTest {
         assertThat(myExample.aList.get(0), is("first"));
         assertThat(myExample.aList.size(), is(1));
 
+    }
+
+    @Test
+    public void rearangeIfInputExists(){
+        // add two diffrent elements
+        myExample.addItem("first");
+        myExample.addItem("second");
+
+        assertThat(myExample.aList.get(1), is("first"));
+        assertThat(myExample.aList.get(0), is("second"));
+
+        // add already existing and expect rearanging
+        myExample.addItem("first");
+
+        assertThat(myExample.aList.get(0), is("first"));
+        assertThat(myExample.aList.get(1), is("second"));
 
     }
 }

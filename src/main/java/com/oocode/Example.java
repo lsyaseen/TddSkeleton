@@ -11,7 +11,9 @@ public class Example {
     }
 
     public void addItem(String a) {
-        aList.add(0,a);
+        if (!aList.contains(a)){
+            aList.add(0,a);
+        }
     }
 
     public boolean isEmpty() {
