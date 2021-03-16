@@ -11,4 +11,11 @@ public class ExampleTest {
         Example myExample = new Example();
         assertThat(myExample.isEmpty(), is(true));
     }
+
+    @Test
+    public void addElement() {
+        Example myExample = new Example();
+        myExample.AddItem("Hello");
+        assertThat(myExample.aList[0], is("Hello"));
+    }
 }
